@@ -19,25 +19,3 @@ function Aleatorios() {
     console.log(peso);
     document.getElementById('peso').value = peso;
 
-}
-function CalcularIMC() {
-
-    imc=peso/(altura*altura);
-    imc=imc.toFixed(1);
-
-    document.getElementById("imc").value=imc;
-    if (imc < 18.5) {
-
-        document.getElementById('nivel').value = "Bajo de Peso";
-
-    } else if (imc >= 18.5 && imc <= 24.9) {
-        document.getElementById('nivel').value = "Peso Saludable";
-
-    }else if (imc >= 25.0 && imc <= 29.9) {
-        document.getElementById('nivel').value = "Sobrepeso";
-    }
-    else if (imc >= 30.0) {
-        document.getElementById('nivel').value = "Obesidad";
-    }
-
-}

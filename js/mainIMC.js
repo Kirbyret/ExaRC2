@@ -2,6 +2,8 @@ var edad;
 var altura;
 var peso;
 var imc;
+var nivel;
+var x=0;
 
 function Aleatorios() {
     edad = Math.random() * (99 - 18) + 18;
@@ -20,6 +22,7 @@ function Aleatorios() {
     document.getElementById('peso').value = peso;
 
 }
+
 function CalcularIMC() {
 
     imc=peso/(altura*altura);
@@ -29,15 +32,42 @@ function CalcularIMC() {
     if (imc < 18.5) {
 
         document.getElementById('nivel').value = "Bajo de Peso";
+        nivel= "Bajo de Peso";
 
     } else if (imc >= 18.5 && imc <= 24.9) {
         document.getElementById('nivel').value = "Peso Saludable";
+        nivel= "Peso Saludable";
 
     }else if (imc >= 25.0 && imc <= 29.9) {
         document.getElementById('nivel').value = "Sobrepeso";
+        nivel= "Sobrepeso";
     }
     else if (imc >= 30.0) {
         document.getElementById('nivel').value = "Obesidad";
+        nivel= "Obesidad";
     }
 
 }
+function Registrar(){
+    var tabla=document.getElementById('Registrar');
+    x++;
+    tabla.innerHTML = tabla.innerHTML+"<br>"+"Numero: "+x+" EDAD: "+edad+" PESO: "+peso +" Altura: "+altura+" IMC="+imc+" Nivel:"+nivel;
+
+
+}
+function Borrar(){
+
+    var tabla=document.getElementById('Registrar');
+    tabla.innerHTML="";
+}
+
+
+var btnGenerar = document.getElementById('generar');
+btnGenerar.addEventListener('click', Aleatorios);
+var btnCalcular = document.getElementById('calcular');
+btnCalcular.addEventListener('click', CalcularIMC);
+var btnRegistrar= document.getElementById('registrar');
+btnRegistrar.addEventListener('click', Registrar);
+var btnBorrar= document.getElementById('borrar');
+btnBorrar.addEventListener('click', Borrar);
+

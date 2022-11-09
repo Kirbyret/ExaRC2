@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/estiloRec.css">
     <title>Recuperación 2</title>
-    <script  src="/js/mainIMC.js"></script>
+    <script  src="/js/mainIMC.js" type="module"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <div class="container">
 
         <div class="sec1">
-            <h2>Encabezado</h2>
+            <h2>Generador de IMC</h2>
             <label for="">Edad:</label>
             <input type="text" readonly name="edad" id="edad">
             <label for="">Altura:</label>
@@ -26,16 +26,17 @@
             <input type="text" readonly name="imc" id="imc">
             <label for="">Nivel=</label>
             <input type="text" readonly name="Nivel" id="nivel">
-            <button onclick="AleatorioEdad()"> GENERAR</button>
-            <button> CALCULAR</button>
-            <button> REGISTRAR</button>
+            <button id="generar"> GENERAR</button>
+            <button id="calcular"> CALCULAR</button>
+            <button id="registrar"> REGISTRAR</button>
+
+            <label for="" id="Registrar"></label>
+
+            <button id="borrar">Borrar Registros</button>
         </div>
 
-
     </div>
-<footer>
-    <center><h5>Paola Emiret Valdez Martinez 7-2</h5></center>
-</footer>
+
 </body>
 
 </html>

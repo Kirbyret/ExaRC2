@@ -1,0 +1,29 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.sec1{
+    background-color: bisque;
+    display: flexbox;
+    justify-self: center;
+    width: 60%;
+    height: 180px;
+    margin-top: 25px;
+}
+button{
+    padding: 10px;
+    background-color: aquamarine;
+    border: 4px;
+    font-size: medium;
+    border-radius: 25px;
+    size: 30px;
+    margin: 10px;
+}
+label{
+    margin: 25px;
+}
+h2{
+    text-align: center;
+    margin: 25px;
+    margin-top: 10px;
+}

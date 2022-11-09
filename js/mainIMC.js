@@ -4,6 +4,11 @@ var peso;
 var imc;
 var nivel;
 var x=0;
+var promedio=0.0;
+var total=0.0;
+var prome=0.0;
+var nivel;
+var prom=document.getElementById(`promedio`)
 
 function Aleatorios() {
     edad = Math.random() * (99 - 18) + 18;
@@ -53,12 +58,27 @@ function Registrar(){
     x++;
     tabla.innerHTML = tabla.innerHTML+"<br>"+"Numero: "+x+" EDAD: "+edad+" PESO: "+peso +" Altura: "+altura+" IMC="+imc+" Nivel:"+nivel;
 
+    promediar();
 
 }
 function Borrar(){
 
     var tabla=document.getElementById('Registrar');
     tabla.innerHTML="";
+
+}
+function promediar()
+{
+
+
+    promedio=0;
+    total=parseFloat(total)+parseFloat(imc);
+
+
+    promedio=total/x;
+    prom.innerHTML="El promedio es: "+promedio.toFixed(1);  
+
+
 }
 
 
